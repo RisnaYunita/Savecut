@@ -218,3 +218,5 @@ Procfile          text
 
 # Ignore files (like .npmignore or .gitignore)
 *.*ignore         text
+
+resources/assets/js/wow.min.js text eol=lf
