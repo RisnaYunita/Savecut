@@ -7,7 +7,7 @@
 <div class="card">
   <div class="col-12 ms-3 mb-3">
     <div class="row">
-      <h3 class="col-lg-10 col-md-9">Salon List</h3>
+      <h3 class="col-lg-10 col-md-9">Review List</h3>
     </div>
     @if(session('success'))
       <div class="alert alert-success">
