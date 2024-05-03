@@ -13,7 +13,7 @@ class CreateSalonsTable extends Migration
       $table->string('salon_name');
       $table->string('salon_location');
       $table->string('salon_phone');
-      $table->text('salon_description')->default(null);
+      $table->text('salon_description')->nullable();
       $table->text('salon_image')->default(null);
     });
   }
