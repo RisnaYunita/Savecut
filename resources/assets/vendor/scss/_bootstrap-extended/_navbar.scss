@@ -12,6 +12,10 @@
     box-shadow: none;
   }
 }
+.navbar.sticky {
+  position: fixed;
+  width: 100%;
+}
 
 .fixed-top {
   z-index: $zindex-fixed;

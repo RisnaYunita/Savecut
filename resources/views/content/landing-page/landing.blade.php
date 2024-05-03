@@ -14,10 +14,10 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- ======== CSS here ======== -->
-    <link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/bootstrap.min.css')) }}" />
-    <link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/lineicons.css')) }}" />
-    <link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/animate.css')) }}" />
-    <link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/main.css')) }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/lineicons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/css/main.css') }}" />
   </head>
   <body>
 
@@ -410,8 +410,8 @@
     </a>
 
     <!-- ======== JS here ======== -->
-    <script src="{{ asset(mix('assets/js/bootstrap.bundle.min.js'))}}"></script>
-    <script src="{{ asset(mix('assets/js/wow.min.js'))}}"></script>
-    <script src="{{ asset(mix('assets/js/mainl.js'))}}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{ asset('assets/js/wow.min.js')}}"></script>
+    <script src="{{ asset('assets/js/mainl.js')}}"></script>
   </body>
 </html>

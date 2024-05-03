@@ -70,6 +70,52 @@ let menu, animate;
     });
   });
 
+  $('#datatable').DataTable({
+    responsive: true,
+    paging: true,
+    lengthChange: true,
+    searching: true,
+    ordering: true,
+    info: true,
+    autoWidth: false
+  });
+  $(document).ready(function () {
+    // Attach event listener when any modal is shown
+    $('.modal').on('shown.bs.modal', function () {
+      // Select the salon_phone input field inside the modal
+      var salonPhoneInput = $(this).find('#salon_phone');
+
+      // Event listener to format phone number when typing
+      salonPhoneInput.keyup(function () {
+        var phoneNumber = $(this).val();
+        phoneNumber = phoneNumber.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+        var formattedPhoneNumber;
+
+        if (phoneNumber.length == 10) {
+          formattedPhoneNumber = phoneNumber.replace(/(\d{4})(\d{3})(\d{3})/, '$1-$2-$3');
+        } else if (phoneNumber.length == 11) {
+          formattedPhoneNumber = phoneNumber.replace(/(\d{4})(\d{4})(\d{3})/, '$1-$2-$3');
+        } else if (phoneNumber.length == 12) {
+          formattedPhoneNumber = phoneNumber.replace(/(\d{4})(\d{4})(\d{4})/, '$1-$2-$3');
+        } else {
+          // Do something if the phone number doesn't match any expected format
+          formattedPhoneNumber = phoneNumber;
+        }
+
+        // Set the formatted phone number back to the input field
+        $(this).val(formattedPhoneNumber);
+      });
+    });
+  });
+  const treatmentSelect = document.getElementById('treatment_name');
+  const treatmentPriceInput = document.getElementById('treatment_price');
+
+  treatmentSelect.addEventListener('change', function () {
+    const selectedTreatmentOption = treatmentSelect.options[treatmentSelect.selectedIndex];
+    const treatmentPrice = selectedTreatmentOption.getAttribute('data-price');
+    treatmentPriceInput.value = treatmentPrice;
+  });
+
   // Display menu toggle (layout-menu-toggle) on hover with delay
   let delay = function (elem, callback) {
     let timeout = null;
